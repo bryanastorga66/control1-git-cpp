@@ -27,8 +27,29 @@ int primo(int N) {
     retorna 0 si no es capicua
     retoran 1 si es capicua
 */
-int capicua(int N) {
-    return 0;
+int main(){
+ int num,aux,resto,ni=0;
+ 
+ cout<<"Ingrese numero"<<endl;
+ cin>>num;
+ 
+ aux=num;
+ 
+ while(aux>0){
+         resto=aux%10;
+      aux=aux/10;
+      ni=ni*10+resto;
+ }
+ 
+ if(ni==num){
+  cout<<"1";
+ }
+ else{
+  cout<<"0";
+  
+ }
+ 
+ return 0;
 }
 
 
