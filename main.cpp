@@ -13,14 +13,42 @@ int fibonacci(int N) {
     return 0;
 }
 
-/* Imprimier en Navo numero primo
-    1, 2, 3, 5, 7, 13, 17, 19, 23
-    
-    1  2  3  4  5  6   7   8   9
+/* Imprimir en Navo numero primo
+ // Ejemplo de programa numeros primos (Alex) 
+#include <stdio.h>
 
-*/
-int primo(int N) {
+int main() {
+    int primos_por_mostrar, n, d;
+    int es_primo;
+
+    printf("Cuantos primos desea mostrar: ");
+    scanf("%d", &primos_por_mostrar);
+
+    n = 2;
+    while (primos_por_mostrar > 0) {
+
+        /* determinar si n es primo */
+        es_primo = 1;
+        for (d = 2; d < n; ++d) {
+            if (n % d == 0) {
+                es_primo = 0;
+                break;
+            }
+        }
+
+        /* mostrar el numero
+         * y actualizar el contador */
+        if (es_primo) {
+            printf("%d ", n);
+            primos_por_mostrar--;
+        }
+        n++;
+    }
+
+    printf("\n");
     return 0;
+}
+
 }
 
 /* Determina si un numero es capicua o no.
