@@ -83,7 +83,22 @@ int main(){
 
 /* Retornar el residuo de una division sin tulizar el operado residuo (modulo %) ni el operador de division (/)
 */
-int residuo(int a, int b) {
+int residuo(int a, int b)
+{
+    int j=a;
+    while(a<b)
+    {
+        a=a+j;
+    }
+    a=a-b;
+    return a;
+}
+int main()
+{
+    int a,b;
+    cin>>a;
+    cin>>b;
+    cout<<residuo(a,b);
     return 0;
 }
 
